@@ -1,0 +1,5 @@
+Canonical Init: /private/tmp/lean-4.33.1-darwin_aarch64/lib/lean/Init.olean
+CHECKED propext: canonical axiom type and universe parameters
+CHECKED Classical.choice: canonical axiom type and universe parameters
+CHECKED Quot.sound: canonical axiom type and universe parameters
+PASS: all three permitted axioms in Jsp108.Main match the pinned toolchain Init.

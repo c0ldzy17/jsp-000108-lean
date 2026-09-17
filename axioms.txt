@@ -1,0 +1,3 @@
+'Jsp108.unit_distance_fixed_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp108.jsp_000108' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Jsp108.jsp_000108_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
