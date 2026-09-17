@@ -1,22 +1,50 @@
-# Local verification environment
+# Verification environment and reconstruction scope
 
-Verification date: 2026-09-17 (UTC).
-Platform: macOS / Darwin, Apple arm64.
-Toolchain: `leanprover/lean4:v4.33.1` (exact version output in `toolchain.txt`).
+Date: 2026-09-17 UTC. Platform: macOS / Apple arm64.
+Lean: `leanprover/lean4:v4.33.1`.
 Mathlib: `0df444a360eaa60ab8c11dca51a86af692955474`.
 
-The full project build completed successfully: 10,329 jobs, including the 1,600-module Sawin dependency closure, the 12-module unit-distance closure, and the final assembly. The build reused already checked dependency outputs where Lake found them current; this is not described as a separate clean build from an empty cache. Its full log is `lake-build.log`.
+## Rebuild of the published original archive
 
-`axioms.txt` records the three final endpoint reports. `tower-axioms.txt` records the unconditional tower and splitting-bridge reports. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+Release v1.0.0 was downloaded from GitHub, its ZIP and SHA-256 checked, and its
+two historical adapters reconstructed from the pinned source. The archive hash
+is `01c27dce2820c79bdda6ed400b13d69736847e1db7e971d9fda984cd53e42ef8`. All 1,621 proof-source hashes matched the originally verified
+source tree. There were no project or vendored build artifacts in this extracted
+directory before this run.
 
-The stock `leanchecker -v Jsp108` passed for all nine local modules; its log is `leanchecker.txt`.
+The complete build passed (10,329 jobs). The build log and reconstruction
+scope are preserved in `verification/v1.0.0-clean-rebuild/` inside the source archive. The original wrapper was then
+stopped to avoid repeating its historical replay: the complete revised proof
+undergoes the separate full axiom, canonical-axiom, fresh-replay and stock-checker
+sequence described below. No new full replay of v1.0.0 is claimed by this rebuild.
 
-The fresh dependency replay uses Lean's stock `Lean.Environment.Replay` and a new empty environment with trust level 0. The driver recursively replays the complete proof dependency closure of all three final endpoints, checks postponed constructors and recursors, rejects other axiom names, and compares the resulting endpoint types and proof terms with their inputs. It is a fresh stock-kernel verification, not an independently implemented external proof checker. See `scripts/focusedFreshReplay.md`.
+Only pinned Mathlib and its transitive package caches were reused. Every cached
+package's git revision matched the manifest and its tracked worktree was clean.
+This was a clean rebuild of the project and both bundled proof developments,
+not a rebuild of Lean or Mathlib from an empty machine.
 
-A separate check compares the exact types and universe parameters of the three permitted axioms with `Init` loaded solely from the pinned toolchain. The canonical-axiom check complements the replay's axiom-name allowlist.
+## Revised version 1.1
 
-Both replay checks are run with network access disabled using macOS `sandbox-exec` and the profile `(version 1)(allow default)(deny network*)`. This isolates verification from the network; it does not claim hardware isolation or a clean operating-system image. Lean's standard kernel is trusted, and no `native_decide` result is used as an additional axiom.
+All nine project modules were rebuilt from the revised sources (10,329
+total build jobs). This build reused existing compiled vendor dependencies;
+their mathematical source files are byte-identical to the separate original
+archive rebuild above. The revised build is therefore not described as another
+empty-cache build of the entire vendor tree.
 
-Reproduction requires an initial online preparation phase to obtain pinned dependencies and reconstruct the two non-bundled adapter files. After preparation, run `sh scripts/verify.sh`; the Lean checks themselves need no network access. Cached build products are absent from the published source archive.
+All three final endpoints use exactly `propext`, `Classical.choice`, and
+`Quot.sound`. Their axiom declaration kinds, types, and universe parameters match
+`Init` from the pinned toolchain. The revised full dependency replay loaded
+811,775 source declarations and checked 132,615 declarations
+in an empty trust-level-zero environment. Stock `leanchecker` also passed for
+all nine local modules. Source verification covers 1,621 mathematical Lean files
+and both verification drivers.
 
-Designated independent review and official prize acceptance are pending. These are submitter-side checks, not curator signatures.
+Both verification sequences ran with networking denied by macOS `sandbox-exec`
+using `(version 1)(allow default)(deny network*)`. Dependency preparation was
+completed beforehand. Version 1.1 requires no plby download or reconstruction.
+
+The compiler, replay, and stock checker use the same Lean kernel implementation.
+They are not independently implemented external checkers or designated official
+review. Official acceptance, attribution, priority, and any award remain pending.
+
+The rebuilt vendor artifacts matched byte-for-byte in 3,210 cases. Seven LI object files and their seven hash sidecars differed. A separate comparison of the two independently loaded environments found all 377 declaration records from all 12 LI modules identical, including every type and all 371 available proof/definition values. This comparison does not establish equality of source-location environment extensions or classify every differing byte. The artifact inventory, declaration-comparison log, and comparison driver are included under `verification/` in the archive.

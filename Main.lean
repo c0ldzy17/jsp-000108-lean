@@ -1,3 +1,10 @@
+/-
+SPDX-License-Identifier: Apache-2.0
+
+Original JSP-000108 additions contributed by c0ldzy17 with OpenAI Codex assistance.
+Licensed under the Apache License, Version 2.0; see LICENSE and LICENSE_SCOPE.md.
+Third-party source attributions and notices remain in force.
+-/
 import Jsp108.UnitDistanceInput
 import Jsp108.CountTransport
 import ErdosUnitDistance.TowerBridge

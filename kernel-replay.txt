@@ -1,7 +1,7 @@
-Loaded 811774 declarations; replaying dependency closure of #[Jsp108.unit_distance_fixed_power, Jsp108.jsp_000108, Jsp108.jsp_000108_eventually].
+Loaded 811775 declarations; replaying dependency closure of #[Jsp108.unit_distance_fixed_power, Jsp108.jsp_000108, Jsp108.jsp_000108_eventually].
 CHECKED Jsp108.unit_distance_fixed_power
 CHECKED Jsp108.jsp_000108
 CHECKED Jsp108.jsp_000108_eventually
-PASS: 132794 declarations replayed into an empty trust-level-0 environment.
+PASS: 132615 declarations replayed into an empty trust-level-0 environment.
 Replayed axioms: #[Quot.sound, propext, Classical.choice]
 Stock Lean kernel replay; not an independent external kernel implementation.

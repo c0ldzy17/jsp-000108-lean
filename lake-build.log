@@ -1,20 +1,9 @@
-ℹ [10308/10329] Replayed Jsp108.Pruning
-info: Jsp108/Pruning.lean:139:0: 'Jsp108.core_of_dense_card' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [10311/10329] Replayed Jsp108.Asymptotic
-info: Jsp108/Asymptotic.lean:82:0: 'Jsp108.not_subpolynomial_eventually_of_dense_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp108/Asymptotic.lean:83:0: 'Jsp108.not_subpolynomial_of_dense_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [10312/10329] Replayed Jsp108.Reduction
-warning: Jsp108/Reduction.lean:19:13: Variable name `hδ` is not explicitly referenced.
-
-Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
-  [apply] _hδ
-
-Note: This linter can be disabled with `set_option linter.unusedVariables false`
-ℹ [10316/10329] Replayed Jsp108.CountTransport
-info: Jsp108/CountTransport.lean:85:0: 'Jsp108.li_count_eq_unitDist' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp108/CountTransport.lean:86:0: 'Jsp108.li_count_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp108/CountTransport.lean:87:0: 'Jsp108.polynomial_growth_of_li_main' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [10318/10329] Replayed ErdosUnitDistance.Internal.NumberFields.OverlapArea
+✔ [10307/10313] Built Jsp108.UnitDistanceInput (17s)
+ℹ [10308/10313] Built Jsp108.Asymptotic (41s)
+info: Jsp108/Asymptotic.lean:89:0: 'Jsp108.not_subpolynomial_eventually_of_dense_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp108/Asymptotic.lean:90:0: 'Jsp108.not_subpolynomial_of_dense_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [10310/10329] Built Jsp108.Counting (41s)
+⚠ [10314/10329] Replayed ErdosUnitDistance.Internal.NumberFields.OverlapArea
 warning: ErdosUnitDistance/Internal/NumberFields/OverlapArea.lean:65:8: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
@@ -47,7 +36,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: ErdosUnitDistance/Internal/NumberFields/OverlapArea.lean:464:8: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [10319/10329] Replayed ErdosUnitDistance.Internal.Section2Base
+⚠ [10315/10329] Replayed ErdosUnitDistance.Internal.Section2Base
 warning: ErdosUnitDistance/Internal/Section2Base.lean:2:0: Use RingTheory.RamificationInertia.Basic
 'Mathlib.NumberTheory.RamificationInertia.Basic' has been deprecated: please replace this import by
 
@@ -238,7 +227,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: ErdosUnitDistance/Internal/Section2Base.lean:1144:2: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [10320/10329] Replayed ErdosUnitDistance.Internal.Section2Arithmetic
+⚠ [10316/10329] Replayed ErdosUnitDistance.Internal.Section2Arithmetic
 warning: ErdosUnitDistance/Internal/Section2Arithmetic.lean:60:4: Try this: 
   letI̵
 
@@ -455,7 +444,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp [F, G, C, hε, mul_comm]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [10321/10329] Replayed ErdosUnitDistance.Internal.Section2
+⚠ [10317/10329] Replayed ErdosUnitDistance.Internal.Section2
 warning: ErdosUnitDistance/Internal/Section2.lean:98:4: `MeasureTheory.measure_eq_measure_of_null_diff` has been deprecated: Use `MeasureTheory.measure_eq_measure_of_null_sdiff` instead
 warning: ErdosUnitDistance/Internal/Section2.lean:121:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
 If you'd rather continue using `push_neg` in your project, you can implement it as follows:
@@ -597,7 +586,7 @@ Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 warning: ErdosUnitDistance/Internal/Section2.lean:1238:4: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [10322/10329] Replayed ErdosUnitDistance.Internal.NumberFields.RootDiscrAdjoinI
+⚠ [10318/10329] Replayed ErdosUnitDistance.Internal.NumberFields.RootDiscrAdjoinI
 warning: ErdosUnitDistance/Internal/NumberFields/RootDiscrAdjoinI.lean:42:6: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
@@ -619,7 +608,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [Polynomial.map_add, Polynomial.map_pow, Polynomial.map_X, RingHom.map_one, Polynomial.map_one]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [10323/10329] Replayed ErdosUnitDistance.Internal.NumberFields.MinkowskiBoundProof
+⚠ [10319/10329] Replayed ErdosUnitDistance.Internal.NumberFields.MinkowskiBoundProof
 warning: ErdosUnitDistance/Internal/NumberFields/MinkowskiBoundProof.lean:2:0: Use RingTheory.RamificationInertia.Basic
 'Mathlib.NumberTheory.RamificationInertia.Basic' has been deprecated: please replace this import by
 
@@ -853,7 +842,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySimpa false
 warning: ErdosUnitDistance/Internal/NumberFields/MinkowskiBoundProof.lean:1251:14: try 'simp' instead of 'simpa'
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [10326/10329] Replayed ErdosUnitDistance.TowerBridge
+⚠ [10322/10329] Replayed ErdosUnitDistance.TowerBridge
 warning: ErdosUnitDistance/TowerBridge.lean:36:2: Try this: 
   haveI̵
 
@@ -934,9 +923,25 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-ℹ [10327/10329] Built Jsp108.Main (15s)
-info: Jsp108/Main.lean:28:0: 'Jsp108.unit_distance_fixed_power' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp108/Main.lean:29:0: 'Jsp108.jsp_000108' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: Jsp108/Main.lean:30:0: 'Jsp108.jsp_000108_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
-✔ [10328/10329] Built Jsp108 (14s)
+⚠ [10323/10329] Built Jsp108.Pruning (34s)
+warning: Jsp108/Pruning.lean:104:4: Try `simp at hpos` instead of `simpa using hpos`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [10324/10329] Built Jsp108.Geometry (31s)
+⚠ [10325/10329] Built Jsp108.Reduction (32s)
+warning: Jsp108/Reduction.lean:26:13: Variable name `hδ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hδ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [10326/10329] Built Jsp108.CountTransport (31s)
+info: Jsp108/CountTransport.lean:92:0: 'Jsp108.li_count_eq_unitDist' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp108/CountTransport.lean:93:0: 'Jsp108.li_count_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp108/CountTransport.lean:94:0: 'Jsp108.polynomial_growth_of_li_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [10327/10329] Built Jsp108.Main (39s)
+info: Jsp108/Main.lean:35:0: 'Jsp108.unit_distance_fixed_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp108/Main.lean:36:0: 'Jsp108.jsp_000108' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Jsp108/Main.lean:37:0: 'Jsp108.jsp_000108_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [10328/10329] Built Jsp108 (39s)
 Build completed successfully (10329 jobs).
